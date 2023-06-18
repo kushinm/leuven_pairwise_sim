@@ -10,7 +10,7 @@ function setupGame(pairdata) {
   const jsPsych = initJsPsych({
     show_progress_bar: true,
     default_iti: 150,
-    on_finish: function () {return jsPsych.data.get().localSave('csv','mydata.csv')}
+    // on_finish: function () {return jsPsych.data.get().localSave('csv','mydata.csv')}
   });
 
   const subject_id = jsPsych.randomization.randomID(10);
@@ -19,7 +19,7 @@ function setupGame(pairdata) {
 
 
   pairsList = Object.values(pairs)
-  pairsList = pairsList.slice(0,10);
+  // pairsList = pairsList.slice(0,10);
   sampledPairs = jsPsych.randomization.sampleWithReplacement(pairsList, pairsList.length)
 
   var timelinePairs = [

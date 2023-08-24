@@ -20,7 +20,7 @@ function setupGame(pairdata) {
 
   pairsList = Object.values(pairs)
   // pairsList = pairsList.slice(0,10);
-  sampledPairs = jsPsych.randomization.sampleWithReplacement(pairsList, pairsList.length)
+  sampledPairs = jsPsych.randomization.sampleWithoutReplacement(pairsList, pairsList.length)
 
   var timelinePairs = [
     _.map(sampledPairs, function (i) { return { pair: i } })
